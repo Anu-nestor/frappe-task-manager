@@ -21,6 +21,10 @@ app_license = "mit"
 # 	}
 # ]
 
+fixtures = [
+    {"dt": "Role", "filters": [["name", "in", ["Task Manager", "Employee"]]]}
+]
+
 # Includes in <head>
 # ------------------
 
