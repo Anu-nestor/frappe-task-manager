@@ -19,9 +19,11 @@ class Task(Document):
 				frappe.throw("Due Date cannot be earlier than Start Date.")
 
 	
+	
 	def validate_assignee(self):
+			# Assignment is optional
 			if not self.assigned_to:
-					frappe.throw("Assigned To is required.")
+					return
 
 			employee = frappe.db.get_value(
 					"Employee",
@@ -51,6 +53,7 @@ class Task(Document):
 					frappe.throw(
 							"Tasks cannot be assigned to a disabled User account."
 					)
+
 
 
 	def handle_completion_date(self):

@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "naming_series:[naming_series]",
  "creation": "2026-10-22 15:57:16.449809",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -12,7 +13,8 @@
   "due_date",
   "status",
   "completion_date",
-  "reason"
+  "reason",
+  "naming_series"
  ],
  "fields": [
   {
@@ -31,8 +33,7 @@
    "fieldname": "assigned_to",
    "fieldtype": "Link",
    "label": "Assigned To",
-   "options": "Employee",
-   "reqd": 1
+   "options": "Employee"
   },
   {
    "fieldname": "start_date",
@@ -63,15 +64,24 @@
    "fieldname": "reason",
    "fieldtype": "Small Text",
    "label": "Reason"
+  },
+  {
+   "default": "TASK-.####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "TASK-.####",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-10-22 17:19:56.677038",
+ "modified": "2026-10-23 00:38:43.402358",
  "modified_by": "Administrator",
  "module": "Task Manager",
  "name": "Task",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

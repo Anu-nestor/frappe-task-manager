@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2026-10-22 15:41:32.157822",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -9,7 +10,8 @@
   "user",
   "status",
   "joining_date",
-  "email"
+  "email",
+  "naming_series"
  ],
  "fields": [
   {
@@ -47,12 +49,20 @@
    "in_list_view": 1,
    "label": "Employee name",
    "reqd": 1
+  },
+  {
+   "default": "EMP-.####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "EMP-.####",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-10-22 16:57:22.615831",
+ "modified": "2026-10-23 00:12:12.419514",
  "modified_by": "Administrator",
  "module": "Task Manager",
  "name": "Employee",
